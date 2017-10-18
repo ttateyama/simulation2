@@ -1,0 +1,99 @@
+.leftWall {
+  width: 20vw;
+  height: 100vh;
+  background-color: green;
+}
+
+.middle {
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.middleWall {
+  width: 50vw;
+  height: 100vh;
+  background-color: #e1ffd8;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightWall {
+  width: 20vw;
+  height: 100vh;
+  background-color: green;
+}
+
+.wallsContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+}
+
+.houseLogo {
+  width: 200px;
+  height: 200px;
+  background-image: url('./images/house.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.loginContainer {
+  height: 400px;
+  width: 40vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  flex-flow: column;
+}
+
+.loginButtons {
+  height: 100px;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row;
+}
+
+.login {
+  height: 50px;
+  width: 200px;
+  background-color: green;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register {
+  height: 50px;
+  width: 200px;
+  background-color: green;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gradGreenRight {
+    background: green; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, green, #e1ffd8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, green, #e1ffd8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, green, #e1ffd8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(right, green, #e1ffd8); /* Standard syntax */
+}
+
+#gradGreenLeft {
+    background: green; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, green, #e1ffd8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, green, #e1ffd8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, green, #e1ffd8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left, green, #e1ffd8); /* Standard syntax */
+}
