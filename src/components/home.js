@@ -7,9 +7,13 @@ export default class Home extends Component {
     return (
       <div className="loginContainer">
         <div className="houseLogo" />
+        <div className="inputBoxes">
+          <input placeholder="Username"></input>
+          <input placeholder="Password"></input>
+        </div>
         <div className="loginButtons">
           <div className="login">
-            <Link to="/login">
+            <Link to="/dashboard">
             <h2>Login</h2>
             </Link>
           </div>
