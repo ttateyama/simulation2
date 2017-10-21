@@ -28,7 +28,8 @@ class Wizard extends Component {
   }
   if (this.props.onPage === 2) {
     if (item === 1) {
-      return 'loading-box-blank'
+      return 'loading-box-check'
+      var check = true
     }
     if (item === 2) {
       return 'loading-box-full'
@@ -45,10 +46,10 @@ class Wizard extends Component {
 }
 if (this.props.onPage === 3) {
   if (item === 1) {
-    return 'loading-box-blank'
+    return 'loading-box-check'
   }
   if (item === 2) {
-    return 'loading-box-blank'
+    return 'loading-box-check'
   }
   if (item === 3) {
     return 'loading-box-full'
@@ -62,13 +63,13 @@ if (this.props.onPage === 3) {
 }
 if (this.props.onPage === 4) {
   if (item === 1) {
-    return 'loading-box-blank'
+    return 'loading-box-check'
   }
   if (item === 2) {
-    return 'loading-box-blank'
+    return 'loading-box-check'
   }
   if (item === 3) {
-    return 'loading-box-blank'
+    return 'loading-box-check'
   }
   if (item === 4) {
     return 'loading-box-full'
@@ -79,16 +80,16 @@ if (this.props.onPage === 4) {
 }
 if (this.props.onPage === 5) {
   if (item === 1) {
-    return 'loading-box-blank'
+    return 'loading-box-check'
   }
   if (item === 2) {
-    return 'loading-box-blank'
+    return 'loading-box-check'
   }
   if (item === 3) {
-    return 'loading-box-blank'
+    return 'loading-box-check'
   }
   if (item === 4) {
-    return 'loading-box-blank'
+    return 'loading-box-check'
   }
   if (item === 5) {
     return 'loading-box-full'

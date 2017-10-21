@@ -165,8 +165,10 @@
   width: 25px;
   height: 25px;
   background-color: green;
-  border: 1px solid red;
+  opacity: 0.3;
   border-radius: 25px;
+  background-image: url('./images/check.png');
+  background-size: contain;
 }
 
 .loading-box-full {
