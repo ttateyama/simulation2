@@ -10,6 +10,43 @@
   background-color: white;
 }
 
+.descInput {
+  width: 300px;
+  height: 100px;
+}
+
+.nameInput {
+  width: 300px;
+}
+
+.justCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.dualInputs {
+  width: 40vw;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
+.preview {
+  width: 20vw;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
 .middleWall {
   width: 50vw;
   height: 100vh;
@@ -42,6 +79,133 @@
   background-repeat: no-repeat;
 }
 
+.houseIcon {
+  width: 600px;
+  height: 75px;
+  background-image: url('./images/house.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.addNewContainer {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+}
+
+.resetButtonsContainer {
+  width: 600px;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.smallButton {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4bf442;
+  border-radius: 25px;
+}
+
+.statusBar {
+  width: 40vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.statusHolder {
+  width: 40vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row;
+}
+
+.statusHolderPage1 {
+  width: 40vw;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row;
+}
+
+.loadingBar {
+  width: 40vw;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loading-box-blank {
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  opacity: 0.3;
+  border-radius: 25px;
+}
+
+.loading-box-check {
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  opacity: 0.3;
+  border-radius: 25px;
+  background-image: url('./images/check.png');
+  background-size: contain;
+}
+
+.loading-box-full {
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  border-radius: 25px;
+}
+
+.thinDivider {
+  width: 40vw;
+  height: 2px;
+  background-color: grey;
+}
+
+.addNewButton {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4bf442;
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+.headerBar {
+  height: 75px;
+  width: 40vw;
+  background-color: green;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .loginContainer {
   height: 400px;
   width: 40vw;
@@ -53,8 +217,29 @@
   flex-flow: column;
 }
 
+.largeContainer {
+  height: 600px;
+  width: 40vw;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 25px;
+  flex-flow: column;
+}
+
+.inputBoxes {
+  height: 50px;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column;
+  margin-bottom: 25px;
+}
+
 .loginButtons {
-  height: 100px;
+  height: 50px;
   width: 600px;
   display: flex;
   justify-content: space-around;
