@@ -1,16 +1,12 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {selectPage5, unselectPage5} from '../../reducers/reducer'
+import {selectPage5} from '../../reducers/reducer'
 
 class Wizard5 extends Component {
 
   componentDidMount() {
     this.props.selectPage5()
-  }
-
-  componentWillUnmount() {
-  this.props.unselectPage5()
   }
 
   render() {
@@ -44,4 +40,4 @@ function MapStateToProps(state) {
   )
 }
 
-export default connect(MapStateToProps, {selectPage5, unselectPage5})(Wizard5)
+export default connect(MapStateToProps, {selectPage5})(Wizard5)

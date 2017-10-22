@@ -1,8 +1,27 @@
 import React, {Component} from 'react'
 
 import { Link } from "react-router-dom";
+import {connect} from 'react-redux'
+import {desire} from '../reducers/reducer'
 
-export default class DashboardNav extends Component {
+class DashboardNav extends Component {
+
+  constructor() {
+    super()
+
+    this.state = {
+      desired_rent: ''
+    }
+  }
+
+  eventHandlerDesired(event) {
+    this.setState({
+      desired_rent: event
+    })
+    console.log(this.state)
+    this.props.desire(this.state.desired_rent)
+  }
+
   render() {
     return (
       <div className="largeContainer">
@@ -21,7 +40,7 @@ export default class DashboardNav extends Component {
         </div>
         </Link>
         <h4>Filter properties with desired rent greater than:</h4>
-        <input placeholder="Enter Desired Rent" />
+        <input onChange={(event) => this.eventHandlerDesired(event.target.value)} placeholder="Enter Desired Rent" />
         <div className="resetButtonsContainer">
           <div className="smallButton">
             <h3>Filter</h3>
@@ -36,3 +55,12 @@ export default class DashboardNav extends Component {
     )
   }
 }
+
+function MapStateToProps(state) {
+  return(
+    console.log(state),
+    state
+  )
+}
+
+export default connect(MapStateToProps, {desire})(DashboardNav)

@@ -9,10 +9,6 @@ class Wizard2 extends Component {
     this.props.selectPage2()
   }
 
-  componentWillUnmount() {
-  this.props.unselectPage2()
-  }
-
   render() {
     return(
       <div>
@@ -53,4 +49,4 @@ function MapStateToProps(state) {
   )
 }
 
-export default connect(MapStateToProps, {selectPage2, unselectPage2})(Wizard2)
+export default connect(MapStateToProps, {selectPage2})(Wizard2)
