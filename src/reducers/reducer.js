@@ -6,13 +6,12 @@ const initialState = {
   address: '',
   city: '',
   state: '',
-  zip: '',
+  zip: 0,
   image_url: '',
-  loan_amount: '',
-  monthly_amount: '',
-  desired_rent: '',
-  user_id: '',
-  onPage: ''
+  loan_amount: 0,
+  monthly_amount: 0,
+  desired_rent: 0,
+  user_id: ''
 }
 
 const PAGE_SELECTED1 = "PAGE_SELECTED1";
@@ -24,6 +23,15 @@ const LOGIN = "LOGIN";
 const PASSWORD = "PASSWORD"
 const DESIRE = "DESIRE"
 const PROPERTY_NAME = "PROPERTY_NAME"
+const PROPERTY_DESC = "PROPERTY_DESC"
+const PROPERTY_ADDRESS = "PROPERTY_ADDRESS"
+const PROPERTY_CITY = "PROPERTY_CITY"
+const PROPERTY_STATE = "PROPERTY_STATE"
+const PROPERTY_ZIP = "PROPERTY_ZIP"
+const PROPERTY_IMAGE_URL = "PROPERTY_IMAGE_URL"
+const PROPERTY_LOAN_AMOUNT = "PROPERTY_LOAN_AMOUNT"
+const PROPERTY_MONTHLY_AMOUNT = "PROPERTY_MONTHLY_AMOUNT"
+const PROPERTY_DESIRED_RENT = "PROPERTY_DESIRED_RENT"
 
 function reducer( state = initialState, action){
   switch(action.type) {
@@ -54,6 +62,33 @@ function reducer( state = initialState, action){
     case PROPERTY_NAME:
       let {propertyName} = action
       return {...state, name: action.payload}
+    case PROPERTY_DESC:
+      let {propertyDesc} = action
+      return {...state, description: action.payload}
+    case PROPERTY_ADDRESS:
+      let {propertyAddress} = action
+      return {...state, address: action.payload}
+    case PROPERTY_STATE:
+      let {propertyState} = action
+      return {...state, state: action.payload}
+    case PROPERTY_CITY:
+      let {propertyCity} = action
+      return {...state, city: action.payload}
+    case PROPERTY_ZIP:
+      let {propertyZip} = action
+      return {...state, zip: action.payload}
+    case PROPERTY_IMAGE_URL:
+      let {propertyImageURL} = action
+      return {...state, image_url: action.payload}
+    case PROPERTY_LOAN_AMOUNT:
+      let {propertyLoanAmount} = action
+      return {...state, loan_amount: action.payload}
+    case PROPERTY_MONTHLY_AMOUNT:
+      let {propertyMonthlyAmount} = action
+      return {...state, monthly_amount: action.payload}
+    case PROPERTY_DESIRED_RENT:
+      let {propertyDesiredRent} = action
+      return {...state, desired_rent: action.payload}
     default: return state;}
 
 }
@@ -83,6 +118,69 @@ export function propertyName(propertyName) {
   return {
     type: PROPERTY_NAME,
     payload: propertyName
+  }
+}
+
+export function propertyDesc(propertyDesc) {
+  return {
+    type: PROPERTY_DESC,
+    payload: propertyDesc
+  }
+}
+
+export function propertyAddress(propertyAddress) {
+  return {
+    type: PROPERTY_ADDRESS,
+    payload: propertyAddress
+  }
+}
+
+export function propertyCity(propertyCity) {
+  return {
+    type: PROPERTY_CITY,
+    payload: propertyCity
+  }
+}
+
+export function propertyState(propertyState) {
+  return {
+    type: PROPERTY_STATE,
+    payload: propertyState
+  }
+}
+
+export function propertyZip(propertyZip) {
+  return {
+    type: PROPERTY_ZIP,
+    payload: propertyZip
+  }
+}
+
+export function propertyLoanAmount(propertyLoanAmount) {
+  return {
+    type: PROPERTY_LOAN_AMOUNT,
+    payload: propertyLoanAmount
+  }
+}
+
+export function propertyMonthlyAmount(propertyMonthlyAmount) {
+  return {
+    type: PROPERTY_MONTHLY_AMOUNT,
+    payload: propertyMonthlyAmount
+  }
+}
+
+export function propertyImageURL(propertyImageURL) {
+  return {
+    type: PROPERTY_IMAGE_URL,
+    payload: propertyImageURL
+  }
+}
+
+export function propertyDesiredRent(propertyDesiredRent) {
+  return {
+    type: PROPERTY_DESIRED_RENT,
+    payload: propertyDesiredRent
   }
 }
 

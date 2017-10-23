@@ -45,6 +45,7 @@
   border-width: 1px;
   border-color: black;
   border-style: solid;
+  background-size: cover;
 }
 
 .middleWall {
@@ -91,12 +92,27 @@
 }
 
 .addNewContainer {
-  width: 600px;
+  width: 40vw;
   height: 400px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-flow: column;
+}
+
+.houseDisplay {
+  width: 40vw;
+  height: 400px;
+  background-color: pink;
+  display: flex;
+  justify-content: space-around;
+}
+
+.housePreview {
+  width: 200px;
+  height: 200px;
+  background-color: grey;
+  background-size: cover;
 }
 
 .resetButtonsContainer {
@@ -182,6 +198,8 @@
   width: 40vw;
   height: 2px;
   background-color: grey;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .addNewButton {

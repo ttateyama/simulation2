@@ -50,6 +50,24 @@ class DashboardNav extends Component {
             </div>
         </div>
         <div className="thinDivider"/>
+        <div className="houseDisplay">
+          <div className="housePreview">
+           <style>{`.preview{background-image: url(${this.props.image_url})`}</style>
+          </div>
+          <div>
+          <p>Property Name: {this.props.name}</p>
+            <p>Property Description: {this.props.description}</p>
+            <p>Property Address: {this.props.address}</p>
+            <p>Property City: {this.props.city}</p>
+            <p>Property State: {this.props.state}</p>
+            <p>Property ZIP: {this.props.zip}</p>
+          </div>
+          <div>
+            <p>Loan Amount: {this.props.loan_amount}</p>
+            <p>Monthly Amount: {this.props.monthly_amount}</p>
+            <p>Desired Rent: {this.props.desired_rent}</p>
+          </div>
+        </div>
       </div>
     </div>
     )

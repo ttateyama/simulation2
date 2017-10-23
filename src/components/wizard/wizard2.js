@@ -1,9 +1,48 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {selectPage2, unselectPage2} from '../../reducers/reducer'
+import {selectPage2, unselectPage2, propertyAddress, propertyCity, propertyState, propertyZip} from '../../reducers/reducer'
 
 class Wizard2 extends Component {
+
+  constructor() {
+    super()
+
+    this.state = {
+      property_address: '',
+      property_city: '',
+      property_state: '',
+      property_zip: ''
+    }
+  }
+
+  eventHandlerPropertyAddress(event) {
+    this.setState({
+      property_address: event
+    })
+    this.props.propertyAddress(this.state.property_address)
+  }
+
+  eventHandlerPropertyCity(event) {
+    this.setState({
+      property_city: event
+    })
+    this.props.propertyCity(this.state.property_city)
+  }
+
+  eventHandlerPropertyState(event) {
+    this.setState({
+      property_state: event
+    })
+    this.props.propertyState(this.state.property_state)
+  }
+
+  eventHandlerPropertyZip(event) {
+    this.setState({
+      property_zip: event
+    })
+    this.props.propertyZip(this.state.property_zip)
+  }
 
   componentDidMount() {
     this.props.selectPage2()
@@ -14,7 +53,7 @@ class Wizard2 extends Component {
       <div>
         <div className="justCenter">
           <h3>Address</h3>
-          <input className="nameInput" placeholder="Type in your address here."/>
+          <input onChange={(event) => this.eventHandlerPropertyAddress(event.target.value)} className="nameInput" placeholder="Type in your address here."/>
         </div>
         <div className="dualInputs">
           <h3>City</h3>
@@ -22,9 +61,9 @@ class Wizard2 extends Component {
           <h3>Zip</h3>
         </div>
         <div className="dualInputs">
-          <input placeholder="Type in your city." />
-          <input placeholder="Type in your state." />
-          <input placeholder="Type in your zip code here."/>
+          <input onChange={(event) => this.eventHandlerPropertyCity(event.target.value)} placeholder="Type in your city." />
+          <input onChange={(event) => this.eventHandlerPropertyState(event.target.value)} placeholder="Type in your state." />
+          <input onChange={(event) => this.eventHandlerPropertyZip(event.target.value)} placeholder="Type in your zip code here."/>
         </div>
         <div className="statusHolder">
           <div className="smallButton">
@@ -49,4 +88,4 @@ function MapStateToProps(state) {
   )
 }
 
-export default connect(MapStateToProps, {selectPage2})(Wizard2)
+export default connect(MapStateToProps, {selectPage2, propertyAddress, propertyState, propertyCity, propertyZip})(Wizard2)
