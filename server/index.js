@@ -31,5 +31,5 @@ app.get('/api/properties', properties_controller.read);
 app.delete('/api/properties/:id', properties_controller.delete);
 app.get('/api/properties/filter', properties_controller.filter);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.listen(port, () => { console.log(`Server listening on port ${port}.`); });

@@ -1,16 +1,35 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {selectPage4, unselectPage4} from '../../reducers/reducer'
+import {selectPage4, propertyLoanAmount, propertyMonthlyAmount} from '../../reducers/reducer'
 
 class Wizard4 extends Component {
 
-  componentDidMount() {
-    this.props.selectPage4()
+  constructor() {
+    super()
+
+    this.state = {
+      loan_amount: '',
+      monthly_amount: ''
+    }
   }
 
-  componentWillUnmount() {
-  this.props.unselectPage4()
+  eventHandlerLoanAmount(event) {
+    this.setState({
+      loan_amount: event
+    })
+    this.props.propertyLoanAmount(this.state.loan_amount)
+  }
+
+  eventHandlerMonthlyAmount(event) {
+    this.setState({
+      monthly_amount: event
+    })
+    this.props.propertyMonthlyAmount(this.state.monthly_amount)
+  }
+
+  componentDidMount() {
+    this.props.selectPage4()
   }
 
   render() {
@@ -18,9 +37,9 @@ class Wizard4 extends Component {
       <div>
         <div className="justCenter">
           <h3>Loan Amount</h3>
-          <input className="nameInput" placeholder="Type in your loan amount."/>
+          <input onChange={(event) => this.eventHandlerLoanAmount(event.target.value)} className="nameInput" placeholder="Type in your loan amount."/>
           <h3>Monthly Mortgage</h3>
-          <input className="nameInput" placeholder="Type in your monthly mortgage."/>
+          <input onChange={(event) => this.eventHandlerMonthlyAmount(event.target.value)} className="nameInput" placeholder="Type in your monthly mortgage."/>
         </div>
         <div className="statusHolder">
           <div className="smallButton">
@@ -45,4 +64,4 @@ function MapStateToProps(state) {
   )
 }
 
-export default connect(MapStateToProps, {selectPage4, unselectPage4})(Wizard4)
+export default connect(MapStateToProps, {selectPage4, propertyLoanAmount, propertyMonthlyAmount})(Wizard4)
